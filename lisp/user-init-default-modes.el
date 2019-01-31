@@ -80,7 +80,8 @@
 ;;;;;;;;;;;;;;;;;
 
 ;(add-hook 'after-init-hook #'dimmer-mode)
-
+; hide menu bar
+(menu-bar-mode 0)
 
 (provide 'user-init-default-modes)
 

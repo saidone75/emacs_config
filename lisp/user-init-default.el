@@ -18,13 +18,6 @@
 ;; (when (fboundp 'set-scroll-bar-mode)
 ;;   (set-scroll-bar-mode nil))
 
-;;;;;;;;;;;;;;;;;;;;;;;
-;; enable linum mode ;;
-;;;;;;;;;;;;;;;;;;;;;;;
-(if (fboundp 'global-display-line-numbers-mode)
-    (global-display-line-numbers-mode t)
-    (global-linum-mode))
-
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; enable narrowing ;;
 ;;;;;;;;;;;;;;;;;;;;;;

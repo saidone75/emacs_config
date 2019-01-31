@@ -9,7 +9,7 @@
 ;; which-key-mode configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-hook 'after-init-hook #'which-key-mode)
+;(add-hook 'after-init-hook #'which-key-mode)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -31,7 +31,7 @@
 ;;;;;;;;;;;;;;;;;
 ;; beacon mode ;;
 ;;;;;;;;;;;;;;;;;
-(add-hook 'after-init-hook #'beacon-mode)
+;(add-hook 'after-init-hook #'beacon-mode)
 
 
 ;;;;;;;;;;;;;;;;;;
@@ -72,14 +72,14 @@
 ;;;;;;;;;;;;;;;
 
 ;; So when we enter regexes we would not need to escape characters.
-(add-hook 'after-init-hook #'pcre-mode)
+;(add-hook 'after-init-hook #'pcre-mode)
 
 
 ;;;;;;;;;;;;;;;;;
 ;; dimmer mode ;;
 ;;;;;;;;;;;;;;;;;
 
-(add-hook 'after-init-hook #'dimmer-mode)
+;(add-hook 'after-init-hook #'dimmer-mode)
 
 
 (provide 'user-init-default-modes)

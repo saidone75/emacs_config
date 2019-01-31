@@ -13,6 +13,7 @@
 (require 'user-init-company)
 (require 'user-init-theme)
 (require 'user-init-projectile)
+(require 'user-init-rainbow-delimiters)
 
 (require 'user-init-default-modes)
 

@@ -11,6 +11,8 @@
                         projectile
                         magit
 			company
+			paredit
+			rainbow-delimiters
                         ag ;; silver searcher support for projectile
                         zenburn-theme
                         ))

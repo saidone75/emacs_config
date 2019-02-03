@@ -8,9 +8,6 @@
 (add-hook 'after-init-hook #'(lambda()
                                (global-company-mode)
                                ))
-
-
-
 (message "config auto-complete")
 (provide 'user-init-company)
 

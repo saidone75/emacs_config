@@ -1,4 +1,4 @@
-;;; user-init-company.el --- Configuration for company mode
+;;; user-init-rainbow-delimiters.el --- Configuration for rainbow delimiters
 
 ;;; Commentary:
 ;;
@@ -8,4 +8,3 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 (provide 'user-init-rainbow-delimiters)
-

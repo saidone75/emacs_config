@@ -7,14 +7,15 @@
 ;; Dependent packages ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar user-packages '(clojure-mode
-			cider
+                        cider
                         projectile
                         magit
-			company
-			paredit
-			rainbow-delimiters
+                        company
+                        paredit
+                        rainbow-delimiters
                         ag ;; silver searcher support for projectile
                         zenburn-theme
+                        writeroom-mode
                         ))
 
 (message "load configuration")

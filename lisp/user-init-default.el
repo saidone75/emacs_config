@@ -63,7 +63,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; set default directory ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq default-directory "~/")
+;(setq default-directory "~/")
 
 
 ;;;;;;;;;;;;;;;;;;;;;

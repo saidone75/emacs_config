@@ -14,7 +14,7 @@
 (require 'user-init-theme)
 (require 'user-init-projectile)
 (require 'user-init-rainbow-delimiters)
-
+(require 'user-init-writeroom-mode)
 (require 'user-init-default-modes)
 
 (provide 'user-init)

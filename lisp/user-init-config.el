@@ -15,6 +15,7 @@
                         rainbow-delimiters
                         ag ;; silver searcher support for projectile
                         zenburn-theme
+                        solarized-theme
                         writeroom-mode
                         ))
 

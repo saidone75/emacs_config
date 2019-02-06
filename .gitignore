@@ -13,6 +13,7 @@ Session.vim
 *.elc
 auto-save-list
 tramp
+projectile-bookmarks.eld
 /elpa
 /el-get
 .\#*

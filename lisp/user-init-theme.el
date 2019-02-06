@@ -7,7 +7,7 @@
 
 (defun user-init-configure-zenburn ()
   "Configure zenburn theme."
-  (load-theme 'zenburn t))
+  (load-theme 'zenburn))
 
 (defun user-init-configure-solarized ()
   "Configure solarized theme."

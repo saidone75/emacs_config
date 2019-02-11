@@ -1,14 +1,5 @@
-;;; user-init-company.el --- Configuration for company mode
+(message "configuring company-mode")
 
-;;; Commentary:
-;;
+(add-hook 'after-init-hook 'global-company-mode)
 
-;;; Code:
-
-(add-hook 'after-init-hook #'(lambda()
-                               (global-company-mode)
-                               ))
-(message "config auto-complete")
 (provide 'user-init-company)
-
-;;; user-init-company.el ends here

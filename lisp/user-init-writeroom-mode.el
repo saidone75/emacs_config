@@ -1,12 +1,8 @@
-;;; user-init-writeroom-mode.el --- Configuration for writeroom mode
-
-;;; Commentary:
-;;
-
-;;; Code:
+(message "configuring writeroom-mode")
 
 (with-eval-after-load 'writeroom-mode
 
+  ;; switch theme when entering writeroom-mode
   (load-theme 'solarized-light)
 
   (defun my-writeroom-theme (arg)
@@ -18,7 +14,4 @@
 
   (add-to-list 'writeroom-global-effects #'my-writeroom-theme))
 
-(message "config writeroom-mode")
 (provide 'user-init-writeroom-mode)
-
-;;; user-init-company.el ends here

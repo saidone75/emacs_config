@@ -1,11 +1,6 @@
-;;; user-init-config.el --- Main emacs configuration file
-;;; Commentary:
-;;
+(message "loading configuration")
 
-;;; Code:
-;;;;;;;;;;;;;;;;;;;;;;;;
-;; Dependent packages ;;
-;;;;;;;;;;;;;;;;;;;;;;;;
+;; set here the needed packages
 (defvar user-packages '(clojure-mode
                         cider
                         projectile
@@ -19,7 +14,4 @@
                         writeroom-mode
                         ))
 
-(message "load configuration")
 (provide 'user-init-config)
-
-;;; user-init-config.el ends here

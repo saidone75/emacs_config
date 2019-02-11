@@ -1,9 +1,4 @@
-;;; user-init-theme.el --- Configure color theme
-
-;;; Commentary:
-;;
-
-;;; Code:
+(message "configuring themes")
 
 (defun user-init-configure-zenburn ()
   "Configure zenburn theme."
@@ -14,11 +9,8 @@
   (load-theme 'solarized-dark)
   (load-theme 'solarized-light))
 
-;;In order to change theme, change initilialization function here.
+;; select theme to load on startup
 ;; (add-hook 'after-init-hook 'user-init-configure-solarized)
 (add-hook 'after-init-hook 'user-init-configure-zenburn)
 
-(message "config theme")
 (provide 'user-init-theme)
-
-;;; user-init-theme.el ends here

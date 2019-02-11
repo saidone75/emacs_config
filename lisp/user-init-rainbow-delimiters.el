@@ -1,9 +1,4 @@
-;;; user-init-rainbow-delimiters.el --- Configuration for rainbow delimiters
-
-;;; Commentary:
-;;
-
-;;; Code:
+(message "configuring rainbow-delimiters")
 
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 

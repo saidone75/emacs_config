@@ -1,11 +1,3 @@
-;;; user-init.el --- User initilization file
-;; Init packages
-
-;;; Commentary:
-;;
-
-;;; Code:
-
 (require 'user-init-config)
 (require 'user-init-default)
 (require 'user-init-packages)
@@ -18,5 +10,3 @@
 (require 'user-init-default-modes)
 
 (provide 'user-init)
-
-;;; user-init.el ends here

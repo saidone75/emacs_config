@@ -1,12 +1,7 @@
-;;; user-init-packages.el --- Configure packages
-
-;;; Commentary:
-;;
+(message "configuring packages")
 
 (require 'package)
 (require 'user-init-config)
-
-;;; Code:
 
 ;; package resources
 ;; ("gnu" . "http://elpa.gnu.org/packages/")
@@ -21,12 +16,10 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; install packages that is stored in user-packages variable
+;; install packages that are stored in user-packages variable
 (dolist (p user-packages)
   (when (not (package-installed-p p))
     (package-refresh-contents)
     (package-install p)))
 
-(message "config packages")
 (provide 'user-init-packages)
-;;; user-init-packages.el ends here

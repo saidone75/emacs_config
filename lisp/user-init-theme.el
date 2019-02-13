@@ -10,7 +10,7 @@
   (load-theme 'solarized-light))
 
 ;; select theme to load on startup
-;; (add-hook 'after-init-hook 'user-init-configure-solarized)
+;(add-hook 'after-init-hook 'user-init-configure-solarized)
 (add-hook 'after-init-hook 'user-init-configure-zenburn)
 
 (provide 'user-init-theme)

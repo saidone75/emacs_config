@@ -3,7 +3,9 @@
 ;; set here the needed packages
 (defvar user-packages '(clojure-mode
                         cider
+                        helm
                         projectile
+                        helm-projectile
                         magit
                         company
                         paredit

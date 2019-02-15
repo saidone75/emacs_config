@@ -5,6 +5,7 @@
 (require 'user-init-company)
 (require 'user-init-theme)
 (require 'user-init-helm)
+(require 'user-init-helm-ag)
 (require 'user-init-projectile)
 (require 'user-init-helm-projectile)
 (require 'user-init-rainbow-delimiters)

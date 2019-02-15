@@ -29,9 +29,9 @@
 (setq inhibit-splash-screen t)
 
 ;; enable ido mode
-(require 'ido)
-(ido-mode t)
-(setq ido-enable-flex-matching t) ;; enable fuzzy matching
+;(require 'ido)
+;(ido-mode t)
+;(setq ido-enable-flex-matching t) ;; enable fuzzy matching
 
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)

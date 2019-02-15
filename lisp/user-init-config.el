@@ -4,13 +4,13 @@
 (defvar user-packages '(clojure-mode
                         cider
                         helm
+                        helm-ag
                         projectile
                         helm-projectile
                         magit
                         company
                         paredit
                         rainbow-delimiters
-                        ag ;; silver searcher support for projectile
                         zenburn-theme
                         solarized-theme
                         writeroom-mode

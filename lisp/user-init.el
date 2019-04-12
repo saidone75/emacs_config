@@ -11,5 +11,6 @@
 (require 'user-init-rainbow-delimiters)
 (require 'user-init-writeroom-mode)
 (require 'user-init-default-modes)
+(require 'user-init-flycheck-joker)
 
 (provide 'user-init)

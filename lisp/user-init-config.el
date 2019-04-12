@@ -14,6 +14,7 @@
                         zenburn-theme
                         solarized-theme
                         writeroom-mode
+                        flycheck-joker
                         ))
 
 (provide 'user-init-config)

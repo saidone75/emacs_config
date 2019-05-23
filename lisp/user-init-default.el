@@ -46,4 +46,7 @@
 ;; run check-parens after saving any file
 (add-hook 'after-save-hook 'check-parens nil t)
 
+;; set GC threshold to 16 MiB
+(setq gc-cons-threshold (expt 2 24))
+
 (provide 'user-init-default)

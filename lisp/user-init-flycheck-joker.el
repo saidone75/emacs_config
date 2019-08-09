@@ -38,6 +38,6 @@
 (add-to-list 'flycheck-checkers 'clojurescript-joker)
 (add-to-list 'flycheck-checkers 'edn-joker)
 
-;;(add-hook 'clojure-mode-hook 'flycheck-mode)
+(add-hook 'clojure-mode-hook 'flycheck-mode)
 
 (provide 'user-init-flycheck-joker)

@@ -32,9 +32,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
-;; set default directory
-;(setq default-directory "~/")
-
 ;; enable highlock mode for all parents
 (global-hi-lock-mode 1)
 

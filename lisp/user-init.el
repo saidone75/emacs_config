@@ -10,7 +10,7 @@
 (require 'user-init-helm-projectile)
 (require 'user-init-rainbow-delimiters)
 (require 'user-init-writeroom-mode)
-(require 'user-init-flycheck-joker)
+;; (require 'user-init-flycheck-joker)
 (require 'user-init-default-modes)
 
 (provide 'user-init)

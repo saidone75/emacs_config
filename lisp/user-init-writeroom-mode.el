@@ -3,8 +3,6 @@
 (with-eval-after-load 'writeroom-mode
 
   ;; switch theme when entering writeroom-mode
-  (load-theme 'solarized-light)
-
   (defun my-writeroom-theme (arg)
     (cond
      ((= arg 1)

@@ -2,31 +2,29 @@
 (message "config default")
 
 ;; disable toolbar
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode 0))
+(tool-bar-mode -1)
 
 ;; disable scrollbar
-(when (fboundp 'set-scroll-bar-mode)
-  (set-scroll-bar-mode nil))
+(set-scroll-bar-mode -1)
 
 ;; enable narrowing
 (put 'narrow-to-region 'disabled nil)
 
 ;; enable paren matching mode
-(show-paren-mode t)
+(show-paren-mode 1)
 
 ;; enable electric pair mode
-(electric-pair-mode t)
+(electric-pair-mode 1)
 
 ;; enable electric indent mode
-(electric-indent-mode)
+(electric-indent-mode 1) 
 
 ;; set regular-expression mode to string
 ;(require 're-builder)
 ;(reb-change-syntax 'string)
 
 ;; disable the splash screen
-(setq inhibit-splash-screen t)
+(setq inhibit-splash-screen 1)
 
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
@@ -34,9 +32,6 @@
 
 ;; enable highlock mode for all parents
 (global-hi-lock-mode 1)
-
-;; run check-parens after saving any file
-(add-hook 'after-save-hook 'check-parens nil t)
 
 ;; set GC threshold to 16 MiB
 (setq gc-cons-threshold (expt 2 24))

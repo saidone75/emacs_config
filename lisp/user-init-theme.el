@@ -5,11 +5,11 @@
   (load-theme 'zenburn))
 
 (defun user-init-configure-solarized ()
-  "Configure solarized theme."
+  "Configure solarized themes."
   (load-theme 'solarized-dark)
   (load-theme 'solarized-light))
 
-;; select theme to load on startup
+;; load all themes on startup
 (add-hook 'after-init-hook 'user-init-configure-zenburn)
 (add-hook 'after-init-hook 'user-init-configure-solarized)
 

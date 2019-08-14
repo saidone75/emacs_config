@@ -13,4 +13,4 @@
 (add-hook 'after-init-hook 'user-init-configure-zenburn)
 (add-hook 'after-init-hook 'user-init-configure-solarized)
 
-(provide 'user-init-theme)
+(provide 'user-init-themes)

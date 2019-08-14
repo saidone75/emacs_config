@@ -1,6 +1,7 @@
 (message "configuring projectile")
 
-(projectile-mode)
+(projectile-mode 1)
+
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (setq projectile-mode-line
       '(:eval (format " Projectile[%s]"

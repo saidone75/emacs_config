@@ -4,6 +4,9 @@
 ;; disable toolbar
 (tool-bar-mode -1)
 
+;; hide menu bar
+(menu-bar-mode -1)
+
 ;; disable scrollbar
 (set-scroll-bar-mode -1)
 

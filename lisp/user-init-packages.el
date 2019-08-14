@@ -1,12 +1,23 @@
 (message "configuring packages")
 
 (require 'package)
-(require 'user-init-config)
 
-;; package resources
-;("gnu" . "http://elpa.gnu.org/packages/")
-;("marmalade" . "http://marmalade-repo.org/packages/")
-;("melpa" . "http://melpa.milkbox.net/packages/")
+;; set here the needed packages
+(defvar user-packages '(clojure-mode
+                        cider
+                        flycheck-joker
+                        helm
+                        helm-ag
+                        projectile
+                        helm-projectile
+                        magit
+                        company
+                        paredit
+                        rainbow-delimiters
+                        zenburn-theme
+                        solarized-theme
+                        writeroom-mode
+                        ))
 
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -16,7 +27,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; install packages that are stored in user-packages variable
+;; install packages
 (dolist (p user-packages)
   (when (not (package-installed-p p))
     (package-refresh-contents)

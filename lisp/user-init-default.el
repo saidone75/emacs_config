@@ -32,7 +32,7 @@
 ;; enable highlock mode for all parents
 (global-hi-lock-mode 1)
 
-;; set GC threshold to 16 MiB
-(setq gc-cons-threshold (expt 2 24))
+;; set GC threshold to 64 MiB
+(setq gc-cons-threshold (expt 2 26))
 
 (provide 'user-init-default)

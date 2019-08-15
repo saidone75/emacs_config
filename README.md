@@ -3,7 +3,7 @@
 `$ git clone https://github.com/saidone75/emacs_config.git ~/.emacs.d`
 
 How to add packages:
-- add package name to `user-packages` list contained in `lisp/user-init-packages.el` 
+- add package name to the list named `user-packages` contained in `lisp/user-init-packages.el` 
 ```clojure
 ;; set here the needed packages
 (defvar user-packages '(clojure-mode

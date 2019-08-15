@@ -11,7 +11,16 @@ How to add packages:
                         ...
                         zenburn-theme
                         ))
-```
-                        
+```                     
 - create (if needed) a new config file for the package named `lisp/user-init-$PACKAGE_NAME.el`
+```clojure
+(message "configuring $PACKAGE_NAME")
+
+...
+
+(provide 'user-init-$PACKAGE_NAME)
+```
 - load config file from `lisp/user-init.el`
+```clojure
+(require 'user-init-$PACKAGE_NAME)
+```

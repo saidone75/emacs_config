@@ -2,7 +2,7 @@
 
 `$ git clone https://github.com/saidone75/emacs_config.git ~/.emacs.d`
 
-How to add a package:
+How to add packages:
 
 - add package name to `user-packages` list contained in `lisp/user-init-packages.el`
 - create (if needed) a new config file for the package named `lisp/user-init-$PACKAGE_NAME.el`

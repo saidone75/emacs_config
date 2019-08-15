@@ -1,5 +1,5 @@
 ;; changes on emacs default values
-(message "config default")
+(message "configuring default")
 
 ;; disable toolbar
 (tool-bar-mode -1)

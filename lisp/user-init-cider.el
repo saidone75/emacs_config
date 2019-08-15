@@ -6,4 +6,3 @@
 (setq nrepl-hide-special-buffers t)
 
 (provide 'user-init-cider)
-

@@ -1,6 +1,7 @@
 (message "configuring helm")
 
 (require 'helm-config)
+
 (helm-mode 1)
 
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)

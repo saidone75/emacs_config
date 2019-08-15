@@ -22,10 +22,6 @@
 ;; enable electric indent mode
 (electric-indent-mode 1) 
 
-;; set regular-expression mode to string
-;(require 're-builder)
-;(reb-change-syntax 'string)
-
 ;; disable the splash screen
 (setq inhibit-splash-screen 1)
 

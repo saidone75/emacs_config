@@ -8,7 +8,7 @@
 (menu-bar-mode -1)
 
 ;; disable scrollbar
-(set-scroll-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; enable narrowing
 (put 'narrow-to-region 'disabled nil)

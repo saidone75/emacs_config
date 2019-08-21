@@ -35,4 +35,8 @@
 ;; set GC threshold to 64 MiB
 (setq gc-cons-threshold (expt 2 26))
 
+;; set preferred browser
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome")
+
 (provide 'user-init-default)

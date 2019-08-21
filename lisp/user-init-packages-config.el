@@ -17,7 +17,7 @@
 
 (defun compact-mode-line ()
   (interactive)
-  (loop for compact in mode-line-compact-list
+  (cl-loop for compact in mode-line-compact-list
         do (let* ((mode (car compact))
                   (mode-str (cdr compact))
                   (old-mode-str (cdr (assq mode minor-mode-alist))))

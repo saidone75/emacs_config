@@ -48,7 +48,11 @@
     ;; Major modes
     (lisp-interaction-mode . "λ")
     (emacs-lisp-mode . "EL")
-    (clojure-mode . "CLJ")))
+    (clojure-mode . "CLJ")
+    (mu4e-main-mode . "✉M")
+    (mu4e-headers-mode . "✉H")
+    (mu4e-view-mode . "✉V")
+    (mu4e-compose-mode . "✉C")))
 
 (defun compact-mode-line ()
   (interactive)

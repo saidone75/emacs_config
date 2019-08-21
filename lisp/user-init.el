@@ -5,13 +5,16 @@
 (require 'user-init-magit)
 (require 'user-init-paredit)
 (require 'user-init-company)
-(require 'user-init-themes)
 (require 'user-init-helm)
 (require 'user-init-helm-ag)
 (require 'user-init-projectile)
 (require 'user-init-helm-projectile)
 (require 'user-init-rainbow-delimiters)
+(require 'user-init-themes)
 (require 'user-init-writeroom-mode)
 ;; (require 'user-init-flycheck-joker)
+
+;; generic config that involve installed packages
+(require 'user-init-packages-config)
 
 (provide 'user-init)

@@ -6,6 +6,7 @@
     (projectile-mode . " ⁍")
     (company-mode . " 𝍎")
     (helm-mode . " ⎈")
+    (overwrite-mode . " ✍")
     ;; Major modes
     (lisp-interaction-mode . "λ")
     (emacs-lisp-mode . "EL")

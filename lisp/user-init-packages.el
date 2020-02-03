@@ -14,6 +14,8 @@
                         company
                         paredit
                         rainbow-delimiters
+                        mu4e-alert
+                        org
                         zenburn-theme
                         solarized-theme
                         writeroom-mode

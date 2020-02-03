@@ -5,3 +5,5 @@ projectile-bookmarks.eld
 recentf
 *~
 custom.el
+network-security.data
+lisp/user-init-mu4e-private.el

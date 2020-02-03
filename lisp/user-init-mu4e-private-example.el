@@ -72,4 +72,11 @@
                    "flag:flagged maildir:\"/saidone-me/INBOX\"") 
            :key ?f)))
 
+(setq mu4e-alert-interesting-mail-query
+      (concat
+       "flag:unread maildir:/saidone/INBOX"
+       " OR "
+       "flag:unread maildir:/saidone-me/INBOX"
+       ))
+
 (provide 'user-init-mu4e-private)

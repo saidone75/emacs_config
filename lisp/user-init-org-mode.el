@@ -9,4 +9,7 @@
 ;; prevent demoting heading also shifting text inside sections
 (setq org-adapt-indentation nil)
 
+;; show todo list on startup
+(add-hook 'after-init-hook 'org-todo-list)
+
 (provide 'user-init-org-mode)

@@ -85,7 +85,7 @@
             :dyn-target (lambda (target msg)
                           (mu4e-get-trash-folder msg))
             :action (lambda (docid msg target)
-                      (mu4e~proc-move docid (mu4e~mark-check-target target) "-N"))))
+                      (mu4e~proc-move docid (mu4e~mark-check-target target) "+S-u-N"))))
 
 ;; fix wrong file name
 (defun mu4e-news ()

@@ -10,3 +10,6 @@
 (require 'user-init)
 
 (provide 'init)
+
+(add-hook 'emacs-startup-hook
+          (lambda () (delete-other-windows)) t)

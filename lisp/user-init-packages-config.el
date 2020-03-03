@@ -4,6 +4,7 @@
 (defvar mode-line-compact-list
   `((paredit-mode . " π")
     (projectile-mode . " ⁍")
+    (cider-mode . " cid")
     (company-mode . " 𝍎")
     (helm-mode . " ⎈")
     (overwrite-mode . " ✍")

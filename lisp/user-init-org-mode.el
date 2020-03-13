@@ -7,6 +7,9 @@
 ;; set default org directory
 (setq org-directory (expand-file-name "~/org"))
 
+;; set default agenda files
+(setq org-agenda-files '("~/org"))
+
 ;; set default capture file
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 

@@ -4,6 +4,9 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; set default org directory
+(setq org-directory (expand-file-name "~/org"))
+
 ;; set default capture file
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 

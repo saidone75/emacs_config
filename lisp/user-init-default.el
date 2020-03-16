@@ -32,8 +32,8 @@
 ;; enable highlock mode for all parents
 (global-hi-lock-mode 1)
 
-;; set GC threshold to 64 MiB
-(setq gc-cons-threshold (expt 2 26))
+;; set GC threshold to 128 MiB
+(setq gc-cons-threshold (expt 2 27))
 
 ;; set preferred browser
 (setq browse-url-browser-function 'browse-url-generic

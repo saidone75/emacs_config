@@ -1,5 +1,6 @@
 (require 'user-init-default)
 (require 'user-init-packages)
+(require 'user-init-auctex)
 (require 'user-init-clojure-mode)
 (require 'user-init-cider)
 (require 'user-init-magit)

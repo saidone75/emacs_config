@@ -3,7 +3,8 @@
 (require 'package)
 
 ;; set here the needed packages
-(defvar user-packages '(clojure-mode
+(defvar user-packages '(auctex
+                        clojure-mode
                         cider
                         flycheck-joker
                         helm

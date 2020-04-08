@@ -7,8 +7,8 @@
 (setq-default TeX-master nil)
 
 (setq TeX-PDF-mode t)
-(setq TeX-view-program-list '(("Chrome" "google-chrome %o")))
-(setq TeX-view-program-selection '((output-pdf "Chrome")))
+(setq TeX-view-program-list '(("Chromium" "chromium-browser %o")))
+(setq TeX-view-program-selection '((output-pdf "Chromium")))
 
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)

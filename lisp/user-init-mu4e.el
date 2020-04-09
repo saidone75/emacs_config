@@ -71,6 +71,9 @@
         (:from-or-to . 24)
         (:subject . nil)))
 
+;; remove underline from headers view
+(set-face-attribute 'mu4e-header-highlight-face nil :underline nil)
+
 ;; custom context label
 (defun mu4e-context-label ()
   (if (mu4e-context-current)

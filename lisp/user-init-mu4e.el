@@ -100,9 +100,9 @@
 (setq mu4e-headers-visible-lines 20)
 
 ;; highlight color
-(add-hook 'mu4e-headers-mode-hook
-          (lambda ()
-            (set-face-background 'mu4e-header-highlight-face "#4F4F4F")))
+;; (add-hook 'mu4e-headers-mode-hook
+;;           (lambda ()
+;;             (set-face-background 'mu4e-header-highlight-face "#4F4F4F")))
 
 (setq epa-pinentry-mode 'loopback)
 

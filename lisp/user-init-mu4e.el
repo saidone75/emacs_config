@@ -67,8 +67,8 @@
 (setq mu4e-headers-time-format "%T")
 (setq mu4e-headers-fields
       '((:human-date . 12)
-        (:flags . 6)
-        (:from-or-to . 24)
+        (:flags . 4)
+        (:from-or-to . 20)
         (:subject . nil)))
 
 ;; remove underline from headers view

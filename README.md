@@ -24,3 +24,8 @@ How to add packages:
 ```clojure
 (require 'user-init-$PACKAGE_NAME)
 ```
+
+## License
+Copyright (c) 2020 Saidone
+
+Distributed under the MIT License

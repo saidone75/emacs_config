@@ -90,6 +90,37 @@
             :action (lambda (docid msg target)
                       (mu4e~proc-move docid (mu4e~mark-check-target target) "+S-u-N"))))
 
+;; c copy message to another folder
+;; see also https://emacs.stackexchange.com/questions/25012/how-can-i-copy-an-email-message-in-mu4e
+(defun my~mark-get-copy-target ()
+  "Ask for a copy target, and propose to create it if it does not exist."
+  (interactive)
+  (let* ((target (mu4e-ask-maildir "Copy message to: "))
+         (target (if (string= (substring target 0 1) "/")
+                     target
+                   (concat "/" target)))
+         (fulltarget (concat mu4e-maildir target)))
+    (when (or (file-directory-p fulltarget)
+              (and (yes-or-no-p
+                    (format "%s does not exist.  Create now?" fulltarget))
+                   (mu4e~proc-mkdir fulltarget)))
+      target)))
+(defun copy-message-to-target(docid msg target)
+  (let ((new_msg_path nil) ;; local variable
+        (msg_flags (mu4e-message-field msg :flags)))
+    (setq new_msg_path (format "%s/%s/cur/%s" mu4e-maildir target (mu4e~draft-message-filename-construct
+                                                                   (mu4e-flags-to-string msg_flags))))
+    (copy-file (mu4e-message-field msg :path) new_msg_path)
+    (mu4e~proc-add new_msg_path (mu4e~mark-check-target target))))
+(add-to-list 'mu4e-marks
+             '(copy
+               :char ("c" . "c")
+               :prompt "copy"
+               :ask-target  my~mark-get-copy-target
+               :action copy-message-to-target))
+(mu4e~headers-defun-mark-for copy)
+(define-key mu4e-headers-mode-map (kbd "c") 'mu4e-headers-mark-for-copy)
+
 ;; remove attachment
 (defun my-remove-attachment (msg num)
   "Remove attachment."

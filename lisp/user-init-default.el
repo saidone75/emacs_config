@@ -35,6 +35,9 @@
 ;; set GC threshold to 128 MiB
 (setq gc-cons-threshold (expt 2 27))
 
+;; set max-specpdl-size
+(setq max-specpdl-size 32000)
+
 ;; set preferred browser
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium-browser")

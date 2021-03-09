@@ -6,7 +6,7 @@
 (defvar user-packages '(auctex
                         clojure-mode
                         cider
-                        flycheck-joker
+                        flycheck-clj-kondo
                         helm
                         helm-ag
                         projectile
@@ -20,6 +20,7 @@
                         zenburn-theme
                         solarized-theme
                         writeroom-mode
+                        web-mode
                         ))
 
 (add-to-list 'package-archives

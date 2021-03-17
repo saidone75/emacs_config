@@ -20,6 +20,7 @@
                         zenburn-theme
                         solarized-theme
                         writeroom-mode
+                        stripes
                         web-mode
                         ))
 

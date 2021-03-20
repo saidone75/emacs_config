@@ -146,6 +146,9 @@
 ;; number of lines to show in headers
 (setq mu4e-headers-visible-lines 20)
 
+;; headers max results
+(setq mu4e-headers-results-limit 2000)
+
 ;; highlight color
 ;; (add-hook 'mu4e-headers-mode-hook
 ;;           (lambda ()

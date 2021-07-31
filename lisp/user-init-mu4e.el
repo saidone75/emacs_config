@@ -47,6 +47,13 @@
 (add-to-list 'mu4e-view-actions
              '("ViewInBrowser" . mu4e-action-view-in-browser) t)
 
+;; temporary file directory for snap chromium
+(defun mu4e-make-temp-file (ext)
+  (let* ((temporary-file-directory "~/snap/chromium/")
+        (tmpfile (make-temp-file "mu4e-" nil (concat "." ext))))
+    (mu4e-remove-file-later tmpfile)
+    tmpfile))
+
 (global-set-key (kbd "C-c m n") 'mu4e)
 (global-set-key (kbd "C-c m u") 'mu4e-update-mail-and-index)
 (setq mu4e-hide-index-messages t)

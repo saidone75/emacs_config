@@ -42,4 +42,8 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium-browser")
 
+;; re-enable some disabled commands
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
 (provide 'user-init-default)

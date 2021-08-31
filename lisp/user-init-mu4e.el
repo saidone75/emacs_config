@@ -153,6 +153,9 @@
 ;; number of lines to show in headers
 (setq mu4e-headers-visible-lines 20)
 
+;; include related
+(setq mu4e-headers-include-related nil)
+
 ;; headers max results
 (setq mu4e-headers-results-limit 2000)
 

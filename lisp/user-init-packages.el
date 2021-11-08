@@ -22,6 +22,7 @@
                         writeroom-mode
                         stripes
                         web-mode
+                        markdown-mode
                         ))
 
 (add-to-list 'package-archives

@@ -50,7 +50,7 @@
 ;; temporary file directory for snap chromium
 (defun mu4e-make-temp-file (ext)
   (let* ((temporary-file-directory "~/snap/chromium/")
-        (tmpfile (make-temp-file "mu4e-" nil (concat "." ext))))
+         (tmpfile (make-temp-file "mu4e-" nil (concat "." ext))))
     (mu4e-remove-file-later tmpfile)
     tmpfile))
 
@@ -134,7 +134,7 @@
   (let* ((attach (mu4e~view-get-attach msg num))
          (path (mu4e-msg-field msg :path))
          (filename (and attach (plist-get attach :name)))
-         (cmd (format "altermime --input='%s' --remove='%s'"  path filename)))
+         (cmd (format "altermime --input='%s' --remove='%s'" path filename)))
     (when (and filename
                (yes-or-no-p
                 (format "Are you sure you want to remove '%s'?" filename)))
@@ -143,6 +143,19 @@
 
 (add-to-list 'mu4e-view-attachment-actions
              '("remove-attachment" . my-remove-attachment))
+
+;; remove all attachments
+(defun my-remove-all-attachment (msg num)
+  "Remove all attachments."
+  (let* ((path (mu4e-msg-field msg :path))
+         (cmd (format "altermime --input='%s' --removeall" path)))
+    (when (yes-or-no-p
+           (format "Are you sure you want to remove all attachments from '%s'?" msg))
+      (shell-command cmd)
+      (message cmd))))
+
+(add-to-list 'mu4e-view-attachment-actions
+             '("remove-all-attachments" . my-remove-all-attachments))
 
 ;; fix wrong file name
 (defun mu4e-news ()

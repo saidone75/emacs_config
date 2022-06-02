@@ -26,6 +26,6 @@ How to add packages:
 ```
 
 ## License
-Copyright (c) 2020-2021 Saidone
+Copyright (c) 2020-2022 Saidone
 
 Distributed under the MIT License

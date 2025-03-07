@@ -8,15 +8,14 @@
 (require 'user-init-company)
 (require 'user-init-helm)
 (require 'user-init-helm-ag)
-(require 'user-init-projectile)
-(require 'user-init-helm-projectile)
+;(require 'user-init-projectile)
+;(require 'user-init-helm-projectile)
 (require 'user-init-rainbow-delimiters)
 (require 'user-init-mu4e)
-(require 'user-init-mu4e-alert)
 (require 'user-init-org-mode)
 (require 'user-init-themes)
 (require 'user-init-writeroom-mode)
-(require 'user-init-flycheck-clj-kondo)
+;(require 'user-init-flycheck-clj-kondo)
 
 ;; generic config that involve installed packages
 (require 'user-init-packages-config)

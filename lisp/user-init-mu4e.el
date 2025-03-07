@@ -1,7 +1,6 @@
 (message "configuring mu4e")
 
 (require 'mu4e)
-
 (require 'user-init-mu4e-private)
 
 ;; spell check
@@ -43,25 +42,15 @@
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
 
+(setq temporary-file-directory "~/snap/chromium/")
+
 ;; view message in browser by typing 'aV'
 (add-to-list 'mu4e-view-actions
              '("ViewInBrowser" . mu4e-action-view-in-browser) t)
 
-;; temporary file directory for snap chromium
-(defun mu4e-make-temp-file (ext)
-  (let* ((temporary-file-directory "~/snap/chromium/")
-         (tmpfile (make-temp-file "mu4e-" nil (concat "." ext))))
-    (mu4e-remove-file-later tmpfile)
-    tmpfile))
-
 (global-set-key (kbd "C-c m n") 'mu4e)
 (global-set-key (kbd "C-c m u") 'mu4e-update-mail-and-index)
 (setq mu4e-hide-index-messages t)
-
-;; load org-mu4e -- installed manually, not through MELPA
-(load "org-mu4e")
-
-(require 'org-mu4e)
 
 ;; turn off colors for message preview
 (require 'mu4e-contrib)
@@ -89,13 +78,13 @@
                               'face 'mu4e-context-face) "]") ""))
 
 ;; d move to trash only without marking for deletion
-(setf (alist-get 'trash mu4e-marks)
-      (list :char '("d" . "▼")
-            :prompt "dtrash"
-            :dyn-target (lambda (target msg)
-                          (mu4e-get-trash-folder msg))
-            :action (lambda (docid msg target)
-                      (mu4e~proc-move docid (mu4e~mark-check-target target) "+S-u-N"))))
+;; (setf (alist-get 'trash mu4e-marks)
+;;       (list :char '("d" . "▼")
+;;             :prompt "dtrash"
+;;             :dyn-target (lambda (target msg)
+;;                           (mu4e-get-trash-folder msg))
+;;             :action (lambda (docid msg target)
+;;                       (mu4e--proc-move docid (mu4e--mark-check-target target) "+S-u-N"))))
 
 ;; c copy message to another folder
 ;; see also https://emacs.stackexchange.com/questions/25012/how-can-i-copy-an-email-message-in-mu4e
@@ -110,7 +99,7 @@
     (when (or (file-directory-p fulltarget)
               (and (yes-or-no-p
                     (format "%s does not exist.  Create now?" fulltarget))
-                   (mu4e~proc-mkdir fulltarget)))
+                   (mu4e-proc-mkdir fulltarget)))
       target)))
 (defun copy-message-to-target(docid msg target)
   (let ((new_msg_path nil) ;; local variable
@@ -141,8 +130,8 @@
       (shell-command cmd)
       (message cmd))))
 
-(add-to-list 'mu4e-view-attachment-actions
-             '("remove-attachment" . my-remove-attachment))
+;; (add-to-list 'mu4e-view-attachment-actions
+;;              '("remove-attachment" . my-remove-attachment))
 
 ;; remove all attachments
 (defun my-remove-all-attachment (msg num)
@@ -154,8 +143,8 @@
       (shell-command cmd)
       (message cmd))))
 
-(add-to-list 'mu4e-view-attachment-actions
-             '("remove-all-attachments" . my-remove-all-attachments))
+;; (add-to-list 'mu4e-view-attachment-actions
+;;              '("remove-all-attachments" . my-remove-all-attachments))
 
 ;; fix wrong file name
 (defun mu4e-news ()
@@ -181,5 +170,21 @@
 
 ;; don't ask to quit
 (setq mu4e-confirm-quit nil)
+
+;; unread messages
+(setq unread-messages-query (format "%s OR %s"
+                                    "flag:unread maildir:'/saidone-kugelmass-local/INBOX'"
+                                    "flag:unread maildir:'/saidone75-gmail-local/INBOX'"))
+
+(defun get-unread-mail-count ()
+  (let* ((command (concat mu4e-mu-binary " msgs-count -- --query='" unread-messages-query "'")))
+    (string-trim (shell-command-to-string command))))
+
+(defun write-unread-mail-count ()
+  (with-temp-file "~/.unread-mail-count" (insert (get-unread-mail-count))))
+
+(add-hook 'after-init-hook #'write-unread-mail-count) 
+(add-hook 'mu4e-view-mode-hook #'write-unread-mail-count)
+(add-hook 'mu4e-index-updated-hook #'write-unread-mail-count)
 
 (provide 'user-init-mu4e)

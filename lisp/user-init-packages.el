@@ -6,21 +6,19 @@
 (defvar user-packages '(auctex
                         clojure-mode
                         cider
-                        flycheck-clj-kondo
+                        ;flycheck-clj-kondo
                         helm
                         helm-ag
-                        projectile
-                        helm-projectile
+                        ;projectile
+                        ;helm-projectile
                         magit
                         company
                         paredit
                         rainbow-delimiters
-                        mu4e-alert
                         org
                         zenburn-theme
                         solarized-theme
                         writeroom-mode
-                        stripes
                         web-mode
                         markdown-mode
                         ))

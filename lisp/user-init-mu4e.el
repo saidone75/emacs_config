@@ -146,12 +146,6 @@
 ;; (add-to-list 'mu4e-view-attachment-actions
 ;;              '("remove-all-attachments" . my-remove-all-attachments))
 
-;; fix wrong file name
-(defun mu4e-news ()
-  "Show the mu4e 'about' page."
-  (interactive)
-  (mu4e-info (concat mu4e-doc-dir "/NEWS.org.gz")))
-
 ;; number of lines to show in headers
 (setq mu4e-headers-visible-lines 20)
 

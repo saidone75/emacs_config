@@ -9,8 +9,8 @@
                         ;flycheck-clj-kondo
                         helm
                         helm-ag
-                        ;projectile
-                        ;helm-projectile
+                        projectile
+                        helm-projectile
                         magit
                         company
                         paredit

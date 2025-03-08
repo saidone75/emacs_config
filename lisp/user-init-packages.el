@@ -6,7 +6,7 @@
 (defvar user-packages '(auctex
                         clojure-mode
                         cider
-                        ;flycheck-clj-kondo
+                        flycheck-clj-kondo
                         helm
                         helm-ag
                         projectile

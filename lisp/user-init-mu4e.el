@@ -78,13 +78,13 @@
                               'face 'mu4e-context-face) "]") ""))
 
 ;; d move to trash only without marking for deletion
-;; (setf (alist-get 'trash mu4e-marks)
-;;       (list :char '("d" . "▼")
-;;             :prompt "dtrash"
-;;             :dyn-target (lambda (target msg)
-;;                           (mu4e-get-trash-folder msg))
-;;             :action (lambda (docid msg target)
-;;                       (mu4e--proc-move docid (mu4e--mark-check-target target) "+S-u-N"))))
+(setf (alist-get 'trash mu4e-marks)
+      (list :char '("d" . "▼")
+            :prompt "dtrash"
+            :dyn-target (lambda (target msg)
+                          (mu4e-get-trash-folder msg))
+            :action (lambda (docid msg target)
+                      (mu4e--server-move docid (mu4e--mark-check-target target) "+S-u-N"))))
 
 ;; c copy message to another folder
 ;; see also https://emacs.stackexchange.com/questions/25012/how-can-i-copy-an-email-message-in-mu4e
@@ -130,8 +130,8 @@
       (shell-command cmd)
       (message cmd))))
 
-;; (add-to-list 'mu4e-view-attachment-actions
-;;              '("remove-attachment" . my-remove-attachment))
+(add-to-list 'mu4e-view-mime-part-actions
+             '("remove-attachment" . my-remove-attachment))
 
 ;; remove all attachments
 (defun my-remove-all-attachment (msg num)
@@ -143,8 +143,8 @@
       (shell-command cmd)
       (message cmd))))
 
-;; (add-to-list 'mu4e-view-attachment-actions
-;;              '("remove-all-attachments" . my-remove-all-attachments))
+(add-to-list 'mu4e-view-mime-part-actions
+             '("remove-all-attachments" . my-remove-all-attachments))
 
 ;; number of lines to show in headers
 (setq mu4e-headers-visible-lines 20)

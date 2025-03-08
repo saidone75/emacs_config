@@ -15,7 +15,7 @@
 (require 'user-init-org-mode)
 (require 'user-init-themes)
 (require 'user-init-writeroom-mode)
-;(require 'user-init-flycheck-clj-kondo)
+(require 'user-init-flycheck-clj-kondo)
 
 ;; generic config that involve installed packages
 (require 'user-init-packages-config)

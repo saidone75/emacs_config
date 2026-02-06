@@ -42,7 +42,10 @@
 ;; don't keep message buffers around
 (setq message-kill-buffer-on-exit t)
 
-(setq temporary-file-directory "~/snap/chromium/")
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "brave")
+
+(setq temporary-file-directory "~/snap/brave/")
 
 ;; view message in browser by typing 'aV'
 (add-to-list 'mu4e-view-actions
